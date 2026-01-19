@@ -19,7 +19,7 @@ export default function LoginPage() {
                         <label className="block text-xs font-mono text-slate-500 mb-1 uppercase">Email</label>
                         <input
                             type="email"
-                            className="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
+                            className="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white focus:outline-none focus:border-secondary transition-colors"
                             placeholder="dev@velocity.com"
                         />
                     </div>
@@ -27,19 +27,19 @@ export default function LoginPage() {
                         <label className="block text-xs font-mono text-slate-500 mb-1 uppercase">Password</label>
                         <input
                             type="password"
-                            className="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white focus:outline-none focus:border-orange-500 transition-colors"
+                            className="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white focus:outline-none focus:border-secondary transition-colors"
                             placeholder="••••••••"
                         />
                     </div>
 
-                    <button className="w-full bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 rounded transition-colors font-mono">
+                    <button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold py-3 rounded transition-colors font-mono">
                         AUTHENTICATE
                     </button>
                 </form>
 
                 <div className="mt-6 text-center text-sm text-slate-500">
                     Don't have an account?{' '}
-                    <Link href="/auth/signup" className="text-orange-500 hover:text-orange-400">
+                    <Link href="/auth/signup" className="text-secondary hover:text-secondary/80">
                         Sign up
                     </Link>
                 </div>

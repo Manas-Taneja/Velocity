@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function HiringPage() {
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-orange-500/30">
+        <div className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-secondary/30">
             {/* NAV */}
             <nav className="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -24,13 +24,13 @@ export default function HiringPage() {
             {/* HERO */}
             <section className="py-20 px-6 max-w-5xl mx-auto text-center">
                 <div className="inline-flex items-center space-x-2 bg-slate-900 border border-slate-800 rounded-full px-3 py-1 mb-8">
-                    <Briefcase className="w-3 h-3 text-orange-500" />
-                    <span className="text-[10px] uppercase tracking-widest text-orange-500 font-bold font-mono">
+                    <Briefcase className="w-3 h-3 text-secondary" />
+                    <span className="text-[10px] uppercase tracking-widest text-secondary font-bold font-mono">
                         For Engineering Leaders
                     </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-black text-white mb-6">
-                    Hire Engineers Who Can <br /> <span className="text-orange-500">Actually Debug</span>.
+                    Hire Engineers Who Can <br /> <span className="text-secondary">Actually Debug</span>.
                 </h1>
                 <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
                     Stop filtering for dynamic programming memorization. Start filtering for the ability to handle dirty data, vague requirements, and broken production environments.

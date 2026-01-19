@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function ManifestoPage() {
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-orange-500/30">
+        <div className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-secondary/30">
             <nav className="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
                     <Link href="/" className="flex items-center space-x-2">
@@ -21,7 +21,7 @@ export default function ManifestoPage() {
 
                 <div className="prose prose-invert prose-lg">
                     <p className="text-xl text-slate-400 leading-relaxed mb-8">
-                        Software engineering hiring is broken. We optimize for algorithms that <strong className="text-orange-500">we never use</strong> and ignore the skills that <strong className="text-orange-500">save production</strong>.
+                        Software engineering hiring is broken. We optimize for algorithms that <strong className="text-secondary">we never use</strong> and ignore the skills that <strong className="text-secondary">save production</strong>.
                     </p>
 
                     <h3 className="text-2xl font-bold text-white mt-12 mb-4">1. Reality over Theory</h3>
@@ -40,7 +40,7 @@ export default function ManifestoPage() {
                     </p>
 
                     <div className="mt-16 pt-8 border-t border-slate-800 flex justify-center">
-                        <Link href="/auth/signup" className="bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-8 rounded font-mono transition-colors">
+                        <Link href="/auth/signup" className="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded font-mono transition-colors">
                             JOIN THE MOVEMENT
                         </Link>
                     </div>

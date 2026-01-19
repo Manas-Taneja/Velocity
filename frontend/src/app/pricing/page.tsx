@@ -4,7 +4,7 @@ import { Check } from 'lucide-react';
 
 export default function PricingPage() {
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-orange-500/30">
+        <div className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-secondary/30">
             <nav className="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
                     <Link href="/" className="flex items-center space-x-2">
@@ -21,8 +21,8 @@ export default function PricingPage() {
                 <h1 className="text-4xl md:text-5xl font-black text-white mb-6">Simple Pricing</h1>
                 <p className="text-xl text-slate-400 mb-16">No credit card required. No hidden tiers.</p>
 
-                <div className="max-w-md mx-auto bg-slate-900 border-2 border-orange-500 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
-                    <div className="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 font-mono uppercase rounded-bl-lg">
+                <div className="max-w-md mx-auto bg-slate-900 border-2 border-secondary rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+                    <div className="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-3 py-1 font-mono uppercase rounded-bl-lg">
                         Developer Preview
                     </div>
                     <h2 className="text-2xl font-bold text-white mb-2">Standard Protocol</h2>
@@ -31,13 +31,13 @@ export default function PricingPage() {
                     </div>
 
                     <ul className="text-left space-y-4 mb-8 text-slate-300">
-                        <li className="flex items-center"><Check className="w-5 h-5 text-orange-500 mr-3" /> Unlimited Practice Problems</li>
-                        <li className="flex items-center"><Check className="w-5 h-5 text-orange-500 mr-3" /> AI Coach Access</li>
-                        <li className="flex items-center"><Check className="w-5 h-5 text-orange-500 mr-3" /> Global Leaderboards</li>
-                        <li className="flex items-center"><Check className="w-5 h-5 text-orange-500 mr-3" /> Portfolio Profile</li>
+                        <li className="flex items-center"><Check className="w-5 h-5 text-secondary mr-3" /> Unlimited Practice Problems</li>
+                        <li className="flex items-center"><Check className="w-5 h-5 text-secondary mr-3" /> AI Coach Access</li>
+                        <li className="flex items-center"><Check className="w-5 h-5 text-secondary mr-3" /> Global Leaderboards</li>
+                        <li className="flex items-center"><Check className="w-5 h-5 text-secondary mr-3" /> Portfolio Profile</li>
                     </ul>
 
-                    <Link href="/auth/signup" className="block w-full bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 rounded-lg font-mono transition-colors">
+                    <Link href="/auth/signup" className="block w-full bg-secondary hover:bg-secondary/90 text-white font-bold py-4 rounded-lg font-mono transition-colors">
                         START CODING NOW
                     </Link>
                     <p className="mt-4 text-xs text-slate-500">
