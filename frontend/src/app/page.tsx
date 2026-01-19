@@ -2,28 +2,26 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  Terminal,
   Database,
   ShieldAlert,
   Cpu,
   CheckCircle2,
   XCircle,
-  ChevronRight,
-  Code2,
   AlertTriangle
 } from 'lucide-react';
+import LandingButtons from '@/components/landing/LandingButtons';
 
 const THEME = {
   bg: 'bg-slate-950',
   panel: 'bg-slate-900',
   border: 'border-slate-800',
   text: 'text-slate-300',
-  accent: 'text-secondary',
+  accent: 'text-orange-500',
   mono: 'font-mono'
 };
 
 const MockTerminal = () => (
-  <div className="w-full max-w-2xl mx-auto mt-12 bg-black rounded-lg border border-slate-800 shadow-2xl overflow-hidden font-mono text-xs md:text-sm">
+  <div id="demo-terminal" className="w-full max-w-2xl mx-auto mt-12 bg-black rounded-lg border border-slate-800 shadow-2xl overflow-hidden font-mono text-xs md:text-sm">
     <div className="bg-slate-900 p-2 flex items-center space-x-2 border-b border-slate-800">
       <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
       <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
@@ -32,7 +30,7 @@ const MockTerminal = () => (
     </div>
     <div className="p-4 space-y-2 text-slate-300">
       <div>
-        <span className="text-green-500">➜</span> <span className="text-secondary">~</span> cat legacy_export_v1.csv
+        <span className="text-green-500">➜</span> <span className="text-blue-400">~</span> cat legacy_export_v1.csv
       </div>
       <div className="opacity-70">
         ID|Name|Email|Active<br />
@@ -41,7 +39,7 @@ const MockTerminal = () => (
         <span className="bg-red-900/50 text-red-200">ERROR: UNEXPECTED DELIMITER AT LINE 3</span>
       </div>
       <div>
-        <span className="text-green-500">➜</span> <span className="text-secondary">~</span> <span className="animate-pulse">_</span>
+        <span className="text-green-500">➜</span> <span className="text-blue-400">~</span> <span className="animate-pulse">_</span>
       </div>
     </div>
   </div>
@@ -55,10 +53,10 @@ interface FeatureCardProps {
 }
 
 const FeatureCard = ({ icon: Icon, title, desc, warning }: FeatureCardProps) => (
-  <div className="p-6 border border-slate-800 bg-slate-900/30 rounded-lg hover:border-secondary/30 transition-colors group">
+  <div className="p-6 border border-slate-800 bg-slate-900/30 rounded-lg hover:border-orange-500/30 transition-colors group">
     <div className="flex items-center justify-between mb-4">
       <div className="p-3 bg-slate-900 rounded-lg border border-slate-800 group-hover:border-slate-700">
-        <Icon className="w-6 h-6 text-slate-400 group-hover:text-secondary transition-colors" />
+        <Icon className="w-6 h-6 text-slate-400 group-hover:text-orange-500 transition-colors" />
       </div>
       {warning && <span className="text-[10px] text-red-500 font-mono border border-red-900 bg-red-900/10 px-2 py-1 rounded">TRAP DETECTED</span>}
     </div>
@@ -69,7 +67,7 @@ const FeatureCard = ({ icon: Icon, title, desc, warning }: FeatureCardProps) => 
 
 export default function VelocityLanding() {
   return (
-    <div className={`min-h-screen ${THEME.bg} text-slate-300 font-sans selection:bg-secondary/30`}>
+    <div className={`min-h-screen ${THEME.bg} text-slate-300 font-sans selection:bg-orange-500/30`}>
 
       {/* NAV */}
       <nav className="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
@@ -83,8 +81,8 @@ export default function VelocityLanding() {
               <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
               <span>SYSTEM ONLINE</span>
             </div>
-            <Link href="/profile" className="text-slate-400 hover:text-white transition-colors">Login</Link>
-            <Link href="/problems" className="bg-white text-black hover:bg-slate-200 px-4 py-2 font-bold rounded transition-colors">
+            <Link href="/auth/login" className="text-slate-400 hover:text-white transition-colors">Login</Link>
+            <Link href="/hiring" className="bg-white text-black hover:bg-slate-200 px-4 py-2 font-bold rounded transition-colors">
               Hiring Manager?
             </Link>
           </div>
@@ -100,32 +98,22 @@ export default function VelocityLanding() {
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center space-x-2 bg-slate-900 border border-slate-800 rounded-full px-3 py-1 mb-8">
-            <AlertTriangle className="w-3 h-3 text-secondary" />
-            <span className="text-[10px] uppercase tracking-widest text-secondary font-bold font-mono">
+            <AlertTriangle className="w-3 h-3 text-orange-500" />
+            <span className="text-[10px] uppercase tracking-widest text-orange-500 font-bold font-mono">
               The Anti-LeetCode Platform
             </span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight mb-6 leading-tight">
             Algorithms are for <span className="text-slate-600">Academics</span>. <br />
-            We Hire <span className="text-secondary">Data Janitors</span>.
+            We Hire <span className="text-orange-500">Data Janitors</span>.
           </h1>
 
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
             Stop testing for binary tree inversion. Start testing for <strong className="text-white">messy CSV parsing</strong>, <strong className="text-white">timezone debugging</strong>, and <strong className="text-white">AI hallucination recovery</strong>.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link href="/problems" className="group relative px-8 py-4 bg-secondary hover:bg-secondary/90 text-white font-bold font-mono rounded overflow-hidden transition-all">
-              <span className="relative z-10 flex items-center">
-                START ASSESSMENT
-                <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </Link>
-            <Link href="/problems" className="px-8 py-4 bg-transparent border border-slate-700 hover:border-slate-500 text-white font-mono rounded transition-all">
-              VIEW DEMO
-            </Link>
-          </div>
+          <LandingButtons />
 
           <MockTerminal />
         </div>
@@ -166,7 +154,7 @@ export default function VelocityLanding() {
           <div className="grid md:grid-cols-2 gap-0 border border-slate-800 rounded-xl overflow-hidden">
             <div className="bg-slate-900/50 p-8 border-b md:border-b-0 md:border-r border-slate-800 opacity-50">
               <div className="flex items-center space-x-2 mb-6">
-                <Database className="w-5 h-5 text-secondary" />
+                <XCircle className="w-5 h-5 text-slate-500" />
                 <h3 className="font-bold text-slate-500 uppercase tracking-widest">Traditional</h3>
               </div>
               <ul className="space-y-4 font-mono text-sm text-slate-500">
@@ -179,17 +167,17 @@ export default function VelocityLanding() {
 
             <div className="bg-slate-900/80 p-8 relative">
               <div className="absolute top-0 right-0 p-2">
-                <span className="bg-secondary/20 text-secondary text-[10px] font-bold px-2 py-1 rounded uppercase">Recommended</span>
+                <span className="bg-orange-600/20 text-orange-500 text-[10px] font-bold px-2 py-1 rounded uppercase">Recommended</span>
               </div>
               <div className="flex items-center space-x-2 mb-6">
-                <CheckCircle2 className="w-5 h-5 text-secondary" />
+                <CheckCircle2 className="w-5 h-5 text-orange-500" />
                 <h3 className="font-bold text-white uppercase tracking-widest">Velocity Protocol</h3>
               </div>
               <ul className="space-y-4 font-mono text-sm text-slate-300">
-                <li className="flex items-center"><span className="mr-3 text-secondary">➜</span> Parse Broken JSON</li>
-                <li className="flex items-center"><span className="mr-3 text-secondary">➜</span> Regex & Data Cleaning</li>
-                <li className="flex items-center"><span className="mr-3 text-secondary">➜</span> "AI Mandatory" (Audit required)</li>
-                <li className="flex items-center"><span className="mr-3 text-secondary">➜</span> Dirty, mixed inputs</li>
+                <li className="flex items-center"><span className="mr-3 text-orange-500">➜</span> Parse Broken JSON</li>
+                <li className="flex items-center"><span className="mr-3 text-orange-500">➜</span> Regex & Data Cleaning</li>
+                <li className="flex items-center"><span className="mr-3 text-orange-500">➜</span> "AI Mandatory" (Audit required)</li>
+                <li className="flex items-center"><span className="mr-3 text-orange-500">➜</span> Dirty, mixed inputs</li>
               </ul>
             </div>
           </div>
@@ -204,9 +192,9 @@ export default function VelocityLanding() {
             <span>VELOCITY PLATFORM © 2026</span>
           </div>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-slate-400 transition-colors">MANIFESTO</a>
-            <a href="#" className="hover:text-slate-400 transition-colors">PRICING</a>
-            <a href="#" className="hover:text-slate-400 transition-colors">LOGIN</a>
+            <Link href="/manifesto" className="hover:text-slate-400 transition-colors">MANIFESTO</Link>
+            <Link href="/pricing" className="hover:text-slate-400 transition-colors">PRICING</Link>
+            <Link href="/auth/login" className="hover:text-slate-400 transition-colors">LOGIN</Link>
           </div>
         </div>
       </footer>
